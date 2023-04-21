@@ -1,16 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatDrawerContainer } from '@angular/material/sidenav';
+import { SidenavService } from './service/SidenavService';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  //  constructor(private sidenavService: SidenavService) {}
+
+  toggleSidenav() {
+    //  this.sidenavService.toggle();
+  }
+
+  showFiller = false;
+
+  ngOnInit(): void {
+    //    	this.sidenavService.setSidenav(this.sidenav);
+  }
 }
-
-
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://angular.io/license
-*/

@@ -4,6 +4,8 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSelectModule } from '@angular/material/select';
 
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
@@ -23,6 +25,8 @@ import { CartListComponent } from './cart-list/cart-list.component';
     BrowserAnimationsModule,
     MatTabsModule,
     MatGridListModule,
+    MatSidenavModule,
+    MatSelectModule,
   ],
   declarations: [
     AppComponent,
