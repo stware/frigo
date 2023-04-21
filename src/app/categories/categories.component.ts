@@ -11,11 +11,11 @@ export class CategoriesComponent {
   categories = categories;
 
   onNotify($event: any) {
-    window.alert(
+    /*    window.alert(
       'Taken product ' +
         $event.product.name +
         ' remaining ' +
         $event.product.quantity
-    );
+    );*/
   }
 }

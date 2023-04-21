@@ -40,6 +40,22 @@ export var products = [
     quantity: 0,
     minQuantity: 2,
   },
+  {
+    id: 5,
+    category: 4,
+    name: 'Kinder bueno white',
+    description: '',
+    quantity: 0,
+    minQuantity: 3,
+  },
+  {
+    id: 6,
+    category: 2,
+    name: 'Galbanino 800gr',
+    description: '',
+    quantity: 0,
+    minQuantity: 3,
+  },
 ];
 
 /*

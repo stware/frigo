@@ -20,6 +20,11 @@ export const categories = [
     name: 'Salumi',
     description: 'Salumi freschi e confezionati',
   },
+  {
+    id: 4,
+    name: 'Dolciumi',
+    description: 'Merendine e cioccolate',
+  },
 ];
 
 /*
