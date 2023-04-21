@@ -2,6 +2,9 @@
 <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="canter">
   <mat-tab *ngFor="let category of categories" label=" {{ category.name }}">
     {{ category.description }}
-    <app-product-list [category]="category"></app-product-list>
+    <app-product-list
+      [category]="category"
+      (notify)="onNotify($event)"
+    ></app-product-list>
   </mat-tab>
 </mat-tab-group>

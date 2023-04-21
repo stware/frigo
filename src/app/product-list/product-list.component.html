@@ -1,9 +1,21 @@
 <h2>Products</h2>
 
+<mat-grid-list cols="4" rowHeight="50px">
+  <mat-grid-tile [colspan]="2"> Product </mat-grid-tile>
+  <mat-grid-tile> Quantity </mat-grid-tile>
+</mat-grid-list>
 <div *ngFor="let product of productsByCategory">
-  <h3>
-    <a [title]="product.name + ' details'">
+  <mat-grid-list cols="4" rowHeight="50px">
+    <mat-grid-tile [colspan]="2">
       {{ product.name }}
-    </a>
-  </h3>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      {{ product.quantity }}
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button *ngIf="canTake(product)" type="button" (click)="takeOne(product)">
+        Take one
+      </button>
+    </mat-grid-tile>
+  </mat-grid-list>
 </div>

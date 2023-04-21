@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from '../products';
 import { categories } from './categories';
 
 @Component({
@@ -8,4 +9,13 @@ import { categories } from './categories';
 })
 export class CategoriesComponent {
   categories = categories;
+
+  onNotify($event: any) {
+    window.alert(
+      'Taken product ' +
+        $event.product.name +
+        ' remaining ' +
+        $event.product.quantity
+    );
+  }
 }

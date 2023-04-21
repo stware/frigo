@@ -1,0 +1,20 @@
+<mat-grid-list cols="4" rowHeight="50px">
+  <mat-grid-tile [colspan]="2"> Product </mat-grid-tile>
+  <mat-grid-tile> Quantity </mat-grid-tile>
+  <mat-grid-tile> Action </mat-grid-tile>
+</mat-grid-list>
+<div *ngFor="let product of productsToBuy">
+  <mat-grid-list cols="4" rowHeight="50px">
+    <mat-grid-tile [colspan]="2">
+      {{ product.name }}
+    </mat-grid-tile>
+    <mat-grid-tile>
+      {{ product.minQuantity - product.quantity }}
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button *ngIf="canBuy(product)" type="button" (click)="buy(product)">
+        Buy
+      </button>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
